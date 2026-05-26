@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f5;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.hero {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+.nav-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.nav-buttons button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  background-color: #111827;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  background-color: #374151;
+}
+
+.page-content {
+  margin-top: 35px;
+}
+.skill-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  padding: 12px 16px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.skill-status {
+  font-size: 14px;
+  background: #e5e7eb;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
