@@ -1,13 +1,24 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function Skills() {
-  const [skills, setSkills] = useState([
+  const [skills, setSkills] = useState(() => {
+  const savedSkills = localStorage.getItem('skills')
+
+  if (savedSkills) {
+    return JSON.parse(savedSkills)
+  }
+
+  return [
     { name: 'Precision Jump', status: 'Learning' },
     { name: 'Kong Vault', status: 'Improving' },
     { name: 'Wall Run', status: 'Mastered' }
-  ])
+  ]
+})
 
   const [newSkill, setNewSkill] = useState('')
+  useEffect(() => {
+  localStorage.setItem('skills', JSON.stringify(skills))
+}, [skills])
 
   const addSkill = () => {
     if (newSkill.trim() === '') return
