@@ -16,6 +16,7 @@ function Skills() {
 })
 
   const [newSkill, setNewSkill] = useState('')
+  const [searchTerm, setSearchTerm] = useState('')
   useEffect(() => {
   localStorage.setItem('skills', JSON.stringify(skills))
 }, [skills])
@@ -36,6 +37,20 @@ function Skills() {
     <div>
       <h2>Skills Page</h2>
 
+      <input
+  type="text"
+  placeholder="Search skills..."
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+  style={{
+    marginTop: '20px',
+    padding: '10px',
+    width: '100%',
+    borderRadius: '10px',
+    border: '1px solid #d1d5db'
+  }}
+/>
+
       <div style={{ marginTop: '20px' }}>
         <input
           type="text"
@@ -55,7 +70,11 @@ function Skills() {
       </div>
 
       <div style={{ marginTop: '25px' }}>
-        {skills.map((skill, index) => (
+        {skills
+  .filter((skill) =>
+    skill.name.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+  .map((skill, index) => (
           <div key={index} className="skill-card">
             <span>{skill.name}</span>
             <select
