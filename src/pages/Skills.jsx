@@ -27,7 +27,7 @@ function Skills() {
     setNewSkill('')
   }
 
-  const deleteSkill = (index) => {
+    const deleteSkill = (index) => {
     const updatedSkills = skills.filter((_, skillIndex) => skillIndex !== index)
     setSkills(updatedSkills)
   }
@@ -71,7 +71,7 @@ function Skills() {
 
     setSkills(updatedSkills)
   }}
-  className="skill-status"
+  className={`skill-status ${skill.status.toLowerCase()}`}
 >
   <option>Learning</option>
   <option>Improving</option>

@@ -1,13 +1,37 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 import Home from './pages/Home'
 import Skills from './pages/Skills'
 import Workouts from './pages/Workouts'
 import ProgressLog from './pages/ProgressLog'
-
+ ``
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
+  const [stats, setStats] = useState({
+  totalSkills: 0,
+  totalWorkouts: 0,
+  averageRating: 0
+})
+
+useEffect(() => {
+  const savedSkills = JSON.parse(localStorage.getItem('skills')) || []
+  const savedWorkouts = JSON.parse(localStorage.getItem('workouts')) || []
+  const savedLogs = JSON.parse(localStorage.getItem('logs')) || []
+
+  const totalRatings = savedLogs.reduce((sum, log) => {
+    return sum + Number(log.rating)
+  }, 0)
+
+  const averageRating =
+    savedLogs.length > 0 ? Math.round(totalRatings / savedLogs.length) : 0
+
+  setStats({
+    totalSkills: savedSkills.length,
+    totalWorkouts: savedWorkouts.length,
+    averageRating: averageRating
+  })
+}, [currentPage])
 
   return (
     <div className="app">
@@ -23,7 +47,13 @@ function App() {
         </div>
 
         <div className="page-content">
-          {currentPage === 'home' && <Home />}
+          {currentPage === 'home' && (
+            <Home
+              totalSkills={stats.totalSkills}
+              totalWorkouts={stats.totalWorkouts}
+              averageRating={stats.averageRating}
+            />
+            )}
           {currentPage === 'skills' && <Skills />}
           {currentPage === 'workouts' && <Workouts />}
           {currentPage === 'progress' && <ProgressLog />}
