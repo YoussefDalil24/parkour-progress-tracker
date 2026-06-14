@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Skills from './pages/Skills'
 import Workouts from './pages/Workouts'
 import ProgressLog from './pages/ProgressLog'
+import About from './pages/About'
  ``
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
@@ -67,6 +68,13 @@ useEffect(() => {
 >
   📈 Progress
 </button>
+
+<button
+  className={currentPage === 'about' ? 'active' : ''}
+  onClick={() => setCurrentPage('about')}
+>
+  👨‍💻 About
+</button>
         </div>
 
         <div className="page-content">
@@ -80,8 +88,13 @@ useEffect(() => {
           {currentPage === 'skills' && <Skills />}
           {currentPage === 'workouts' && <Workouts />}
           {currentPage === 'progress' && <ProgressLog />}
+          {currentPage === 'about' && <About />}
         </div>
       </div>
+      <footer className="footer">
+  <p>Parkour Progress Tracker © 2026</p>
+  <p>Built with React & JavaScript</p>
+</footer>
     </div>
   )
 }
