@@ -1,16 +1,46 @@
-# React + Vite
+# Parkour Progress Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React web application that helps athletes track parkour skills, workouts, and training progress.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Add, edit, delete, search, and filter parkour skills
+- Track skill status: Learning, Improving, Mastered
+- Add and delete workouts
+- Log training progress with notes and ratings
+- Dashboard with dynamic statistics
+- Data saved using localStorage
+- Responsive design for desktop and mobile
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- JavaScript
+- CSS
+- LocalStorage
+- Git & GitHub
 
-## Expanding the ESLint configuration
+## What I Learned
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React components
+- useState and useEffect
+- Props
+- Conditional rendering
+- CRUD operations
+- Search and filtering
+- Responsive design
+- Git/GitHub workflow
+
+## Future Improvements
+
+- User login/signup
+- Backend API with Node.js
+- MongoDB database
+- Video upload for skill progress
+- Deployment with Vercel
+
+## Author
+
+Youssef Dalil
+
+Computer Science Student | React Developer | Building Full-Stack Applications
