@@ -56,9 +56,44 @@ function Skills() {
   setEditingIndex(null)
   setEditValue('')
 }
+
+const totalSkills = skills.length
+
+const masteredSkills = skills.filter(
+  (skill) => skill.status === 'Mastered'
+).length
+
+const improvingSkills = skills.filter(
+  (skill) => skill.status === 'Improving'
+).length
+
+const learningSkills = skills.filter(
+  (skill) => skill.status === 'Learning'
+).length
   return (
     <div>
       <h2>Skills Page</h2>
+      <div className="skills-stats">
+  <div className="mini-stat">
+    <h4>Total</h4>
+    <p>{totalSkills}</p>
+  </div>
+
+  <div className="mini-stat">
+    <h4>Mastered</h4>
+    <p>{masteredSkills}</p>
+  </div>
+
+  <div className="mini-stat">
+    <h4>Improving</h4>
+    <p>{improvingSkills}</p>
+  </div>
+
+  <div className="mini-stat">
+    <h4>Learning</h4>
+    <p>{learningSkills}</p>
+  </div>
+</div>
       <p className="subtitle">
   Organize your parkour skills by category, status, and progress.
 </p>

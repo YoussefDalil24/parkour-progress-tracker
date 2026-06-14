@@ -40,10 +40,33 @@ useEffect(() => {
         <p>Track your skills, workouts, and progress like an athlete.</p>
 
         <div className="nav-buttons">
-          <button onClick={() => setCurrentPage('home')}>Home</button>
-          <button onClick={() => setCurrentPage('skills')}>Skills</button>
-          <button onClick={() => setCurrentPage('workouts')}>Workouts</button>
-          <button onClick={() => setCurrentPage('progress')}>Progress Log</button>
+          <button
+  className={currentPage === 'home' ? 'active' : ''}
+  onClick={() => setCurrentPage('home')}
+>
+  🏠 Home
+</button>
+
+<button
+  className={currentPage === 'skills' ? 'active' : ''}
+  onClick={() => setCurrentPage('skills')}
+>
+  ⚡ Skills
+</button>
+
+<button
+  className={currentPage === 'workouts' ? 'active' : ''}
+  onClick={() => setCurrentPage('workouts')}
+>
+  💪 Workouts
+</button>
+
+<button
+  className={currentPage === 'progress' ? 'active' : ''}
+  onClick={() => setCurrentPage('progress')}
+>
+  📈 Progress
+</button>
         </div>
 
         <div className="page-content">

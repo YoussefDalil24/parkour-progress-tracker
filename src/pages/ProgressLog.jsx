@@ -41,6 +41,19 @@ useEffect(() => {
     <div>
       <h2>Progress Log</h2>
 
+      <p className="subtitle">
+  Record training notes and rate your sessions.
+</p>
+
+<div className="progress-banner">
+  <div>
+    <h3>Measure your improvement</h3>
+    <p>Log what you practiced, how it felt, and how much you improved.</p>
+  </div>
+
+  <div className="banner-icon">📈</div>
+</div>
+
       <div className="form-row">
         <input
           type="text"
@@ -75,24 +88,33 @@ useEffect(() => {
         <button onClick={addLog}>Add</button>
       </div>
 
-      <div style={{ marginTop: '25px' }}>
-        {logs.map((log, index) => (
-          <div key={index} className="skill-card">
-            <div>
-              <strong>{log.skill}</strong>
-              <p>{log.notes}</p>
-            </div>
+     <div style={{ marginTop: '25px' }}>
+  {logs.length === 0 ? (
+    <p className="empty-message">
+      No progress logs yet. Add your first training note.
+    </p>
+  ) : (
+    logs.map((log, index) => (
+      <div key={index} className="skill-card">
+        <div>
+          <strong>{log.skill}</strong>
+          <p>{log.notes}</p>
+        </div>
 
-            <span className="skill-status">
-              {log.rating}/10
-            </span>
+        <span className="skill-status">
+          {log.rating}/10
+        </span>
 
-            <button className="delete-btn" onClick={() => deleteLog(index)}>
-              ×
-            </button>
-          </div>
-        ))}
+        <button
+          className="delete-btn"
+          onClick={() => deleteLog(index)}
+        >
+          ×
+        </button>
       </div>
+    ))
+  )}
+</div>
     </div>
   )
 }

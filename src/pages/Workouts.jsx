@@ -48,6 +48,19 @@ function Workouts() {
     <div>
       <h2>Workouts Page</h2>
 
+      <p className="subtitle">
+  Plan training sessions and track difficulty.
+</p>
+
+<div className="workout-banner">
+  <div>
+    <h3>Build your training routine</h3>
+    <p>Organize vault drills, strength work, conditioning, and technique sessions.</p>
+  </div>
+
+  <div className="banner-icon">💪</div>
+</div>
+
       <div className="form-row">
         <input
           type="text"
@@ -76,17 +89,27 @@ function Workouts() {
       </div>
 
       <div style={{ marginTop: '25px' }}>
-        {workouts.map((workout, index) => (
-          <div key={index} className="skill-card">
-            <span>{workout.name}</span>
-            <span>{workout.duration} min</span>
-            <span className="skill-status">{workout.difficulty}</span>
-            <button className="delete-btn" onClick={() => deleteWorkout(index)}>
-              ×
-            </button>
-          </div>
-        ))}
+  {workouts.length === 0 ? (
+    <p className="empty-message">
+      No workouts yet. Add your first training session.
+    </p>
+  ) : (
+    workouts.map((workout, index) => (
+      <div key={index} className="skill-card">
+        <span>{workout.name}</span>
+        <span>{workout.duration} min</span>
+        <span className="skill-status">{workout.difficulty}</span>
+
+        <button
+          className="delete-btn"
+          onClick={() => deleteWorkout(index)}
+        >
+          ×
+        </button>
       </div>
+    ))
+  )}
+</div>
     </div>
   )
 }
