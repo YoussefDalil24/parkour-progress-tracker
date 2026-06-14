@@ -1,46 +1,73 @@
 # Parkour Progress Tracker
 
-A React web application that helps athletes track parkour skills, workouts, and training progress.
+A responsive React web application that helps athletes track parkour skills, workouts, and training progress in one place.
+
+## Live Demo
+
+https://parkour-progress-tracker.vercel.app/
 
 ## Features
 
-- Add, edit, delete, search, and filter parkour skills
-- Track skill status: Learning, Improving, Mastered
-- Add and delete workouts
-- Log training progress with notes and ratings
-- Dashboard with dynamic statistics
-- Data saved using localStorage
-- Responsive design for desktop and mobile
+* Create, edit, delete, search, and filter parkour skills
+* Track skill status (Learning, Improving, Mastered)
+* Manage workout sessions and difficulty levels
+* Record training progress with notes and ratings
+* Dashboard with dynamic statistics
+* Persistent data storage using LocalStorage
+* Responsive design for desktop and mobile devices
+
+## Screenshots
+
+### Home Page
+
+![Home Page](assets/home-page.png)
+
+### Skills Page
+
+![Skills Page](assets/skills-page.png)
+
+### Workouts Page
+
+![Workouts Page](assets/workouts-page.png)
+
+### Progress Page
+
+![Progress Page](assets/progress-page.png)
 
 ## Tech Stack
 
-- React
-- JavaScript
-- CSS
-- LocalStorage
-- Git & GitHub
+* React
+* JavaScript (ES6+)
+* CSS3
+* LocalStorage
+* Git
+* GitHub
 
 ## What I Learned
 
-- React components
-- useState and useEffect
-- Props
-- Conditional rendering
-- CRUD operations
-- Search and filtering
-- Responsive design
-- Git/GitHub workflow
+* React Components
+* State Management with useState
+* Side Effects with useEffect
+* Props and Component Communication
+* CRUD Operations
+* Search and Filtering
+* Conditional Rendering
+* Responsive Web Design
+* Git and GitHub Workflow
 
 ## Future Improvements
 
-- User login/signup
-- Backend API with Node.js
-- MongoDB database
-- Video upload for skill progress
-- Deployment with Vercel
+* User Authentication
+* Node.js Backend API
+* MongoDB Database
+* User Profiles
+* Video Uploads
+* Progress Analytics Charts
 
 ## Author
 
 Youssef Dalil
 
-Computer Science Student | React Developer | Building Full-Stack Applications
+Computer Science Student at Calvin University
+
+Interested in Software Engineering, Web Development, and Building Real-World Applications.
