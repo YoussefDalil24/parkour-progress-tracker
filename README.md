@@ -43,31 +43,14 @@ https://parkour-progress-tracker.vercel.app/
 * Git
 * GitHub
 
-## What I Learned
-
-* React Components
-* State Management with useState
-* Side Effects with useEffect
-* Props and Component Communication
-* CRUD Operations
-* Search and Filtering
-* Conditional Rendering
-* Responsive Web Design
-* Git and GitHub Workflow
-
-## Future Improvements
-
-* User Authentication
-* Node.js Backend API
-* MongoDB Database
-* User Profiles
-* Video Uploads
-* Progress Analytics Charts
+## What I Worked On
+* Managing application state with React hooks
+* Building CRUD functionality
+* Search and filtering
+* Saving data with LocalStorage
+* Responsive layouts for desktop and mobile
 
 ## Author
 
 Youssef Dalil
-
 Computer Science Student at Calvin University
-
-Interested in Software Engineering, Web Development, and Building Real-World Applications.
